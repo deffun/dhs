@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHondtSymTest2", "DHondtSymTest2\DHondtSymTest2.csproj", "{94641688-19A8-4B67-949D-5612D420EA44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shishaq.Serialization", "..\..\Shishaq\Shishaq.Serialization\Shishaq.Serialization.csproj", "{E5EC39A0-5054-4F62-A5FB-91D4C4E724F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DHondtSymTest.Tests", "DHondtSymTest.Tests\DHondtSymTest.Tests.csproj", "{F295EA59-DCA8-4E75-BF1D-241AECAD171E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94641688-19A8-4B67-949D-5612D420EA44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94641688-19A8-4B67-949D-5612D420EA44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94641688-19A8-4B67-949D-5612D420EA44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94641688-19A8-4B67-949D-5612D420EA44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5EC39A0-5054-4F62-A5FB-91D4C4E724F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5EC39A0-5054-4F62-A5FB-91D4C4E724F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5EC39A0-5054-4F62-A5FB-91D4C4E724F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5EC39A0-5054-4F62-A5FB-91D4C4E724F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F295EA59-DCA8-4E75-BF1D-241AECAD171E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F295EA59-DCA8-4E75-BF1D-241AECAD171E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F295EA59-DCA8-4E75-BF1D-241AECAD171E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F295EA59-DCA8-4E75-BF1D-241AECAD171E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
