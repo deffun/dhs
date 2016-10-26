@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Shishaq.Serialization;
+//using Shishaq.Serialization;
 
 namespace DHondtSymTest2.Mathematics
 {
-	public class Vector<T> : IEquatable<Vector<T>>, ISerializable
+	public class Vector<T> : IEquatable<Vector<T>>//, ISerializable
 		where T : IConvertible
 	{
 		private T[] _data;
@@ -15,15 +15,15 @@ namespace DHondtSymTest2.Mathematics
 			_data = new T[length];
 		}
 
-		public void Serialize(ISerializer serializer, string key)
-		{
-			serializer.SerializePrimitiveCollection(_data, "Data");
-		}
+		//public void Serialize(ISerializer serializer, string key)
+		//{
+		//	serializer.SerializePrimitiveCollection(_data, "Data");
+		//}
 
-		public void Deserialize(IDeserializer deserializer, string key)
-		{
-			_data = deserializer.DeserializePrimitiveCollection<T>("Data");
-		}
+		//public void Deserialize(IDeserializer deserializer, string key)
+		//{
+		//	_data = deserializer.DeserializePrimitiveCollection<T>("Data");
+		//}
 
 		public override int GetHashCode()
 		{
@@ -125,12 +125,21 @@ namespace DHondtSymTest2.Mathematics
 		{
 			return Mul<TResult>(1 / d, v);
 		}
-		public static Vector<T> operator /(Vector<T> v, double d)
-		{
-			return Div<Vector<T>>(v, d);
-		}
+        public static Vector<T> operator /(Vector<T> v, double d)
+        {
+            return Div<Vector<T>>(v, d);
+        }
+        public static TResult Div<TResult>(double d, Vector<T> v)
+            where TResult : Vector<T>, new()
+        {
+            return Generate(Create<TResult>(v.Length), i => OperationProviderRegistry.Get<T>().DivD(d, v[i]));
+        }
+        public static Vector<T> operator /(double d, Vector<T> v)
+        {
+            return Div<Vector<T>>(d, v);
+        }
 
-		public static TResult Mul<TResult>(Vector<T> v0, Vector<T> v1)
+        public static TResult Mul<TResult>(Vector<T> v0, Vector<T> v1)
 			where TResult : Vector<T>, new()
 		{
 			ValidateLengths(v0, v1);

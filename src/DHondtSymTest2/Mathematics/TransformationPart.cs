@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using DHondtSymTest2.Geography;
-using Shishaq.Serialization;
+//using Shishaq.Serialization;
 
 namespace DHondtSymTest2.Mathematics
 {
-	public class TransformationPart : ISerializable
+	public class TransformationPart// : ISerializable
 	{
 		public string Name { get; set; }
 		public double Weight { get; set; }
@@ -29,23 +29,23 @@ namespace DHondtSymTest2.Mathematics
 			}
 		}
 
-		public void Serialize(ISerializer serializer, string key)
-		{
-			serializer.Serialize(Name, "Name");
-			serializer.Serialize(Weight, "Weight");
-			Flows.Serialize(serializer, "Flows");
-			TotalResults.Serialize(serializer, "TotalResults");
-			serializer.SerializeClassDictionary(TerytResults, "TerytResults");
-		}
+		//public void Serialize(ISerializer serializer, string key)
+		//{
+		//	serializer.Serialize(Name, "Name");
+		//	serializer.Serialize(Weight, "Weight");
+		//	Flows.Serialize(serializer, "Flows");
+		//	TotalResults.Serialize(serializer, "TotalResults");
+		//	serializer.SerializeClassDictionary(TerytResults, "TerytResults");
+		//}
 
-		public void Deserialize(IDeserializer deserializer, string key)
-		{
-			Name = deserializer.DeserializeString("Name");
-			Weight = deserializer.DeserializeDouble("Weight");
-			Flows.Deserialize(deserializer, "Flows");
-			TotalResults.Deserialize(deserializer, "TotalResults");
-			TerytResults = deserializer.DeserializeClassDictionary<Teryt, Vector<double>>("TerytResults");
-		}
+		//public void Deserialize(IDeserializer deserializer, string key)
+		//{
+		//	Name = deserializer.DeserializeString("Name");
+		//	Weight = deserializer.DeserializeDouble("Weight");
+		//	Flows.Deserialize(deserializer, "Flows");
+		//	TotalResults.Deserialize(deserializer, "TotalResults");
+		//	TerytResults = deserializer.DeserializeClassDictionary<Teryt, Vector<double>>("TerytResults");
+		//}
 
 		public Vector<double> GetTerytElectionTransformation(Teryt teryt)
 		{
@@ -61,7 +61,7 @@ namespace DHondtSymTest2.Mathematics
 
 		public Vector<double> GetPollFactor(Vector<double> electionTransformation, Vector<double> poll)
 		{
-			var pf = poll / electionTransformation;
+			var pf = 1.0 / poll / electionTransformation;
 			return pf;
 		}
 

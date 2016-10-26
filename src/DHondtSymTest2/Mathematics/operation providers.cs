@@ -9,10 +9,11 @@ namespace DHondtSymTest2.Mathematics
 		T Add(T t0, T t1);
 		T MulD(double d, T t);
 		T Mul(T t0, T t1);
-		T Div(T t0, T t1);
-	}
+        T DivD(double d, T t);
+        T Div(T t0, T t1);
+    }
 
-	public interface IConverter<out TTarget, in TSource>
+    public interface IConverter<out TTarget, in TSource>
 	{
 		TTarget ConvertFrom(TSource source);
 	}
@@ -62,7 +63,12 @@ namespace DHondtSymTest2.Mathematics
 			return t0 * t1;
 		}
 
-		public double Div(double t0, double t1)
+	    public double DivD(double d, double t)
+	    {
+	        return d / t;
+	    }
+
+	    public double Div(double t0, double t1)
 		{
 			return t0 / t1;
 		}
@@ -113,7 +119,12 @@ namespace DHondtSymTest2.Mathematics
 			return t0 * t1;
 		}
 
-		public int Div(int t0, int t1)
+	    public int DivD(double d, int t)
+	    {
+	        return (int)Math.Round(d / t);
+	    }
+
+	    public int Div(int t0, int t1)
 		{
 			return t0 / t1;
 		}

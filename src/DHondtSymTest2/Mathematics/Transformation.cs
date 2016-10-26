@@ -2,11 +2,11 @@
 using System.IO;
 using System.Linq;
 using DHondtSymTest2.Politics;
-using Shishaq.Serialization;
+//using Shishaq.Serialization;
 
 namespace DHondtSymTest2.Mathematics
 {
-	public class Transformation : ISerializable
+	public class Transformation// : ISerializable
 	{
 		public const string DataFormatName = "DHST";
 		public const int DataFormatVersion = 1;
@@ -18,31 +18,31 @@ namespace DHondtSymTest2.Mathematics
 			Parts = TransformationPartRegistry.GetParts();
 		}
 
-		public void Serialize(Stream outputStream)
-		{
-			using (var serializer = new BinarySerializer(outputStream, DataFormatName, DataFormatVersion))
-			{
-				Serialize(serializer, "Transformation");
-			}
-		}
+		//public void Serialize(Stream outputStream)
+		//{
+		//	using (var serializer = new BinarySerializer(outputStream, DataFormatName, DataFormatVersion))
+		//	{
+		//		Serialize(serializer, "Transformation");
+		//	}
+		//}
 
-		public void Deserialize(Stream inputStream)
-		{
-			using (var deserializer = new BinaryDeserializer(inputStream, DataFormatName, DataFormatVersion))
-			{
-				Deserialize(deserializer, "Transformation");
-			}
-		}
+		//public void Deserialize(Stream inputStream)
+		//{
+		//	using (var deserializer = new BinaryDeserializer(inputStream, DataFormatName, DataFormatVersion))
+		//	{
+		//		Deserialize(deserializer, "Transformation");
+		//	}
+		//}
 
-		public void Serialize(ISerializer serializer, string key)
-		{
-			serializer.SerializeClassCollection(Parts, "Parts");
-		}
+		//public void Serialize(ISerializer serializer, string key)
+		//{
+		//	serializer.SerializeClassCollection(Parts, "Parts");
+		//}
 
-		public void Deserialize(IDeserializer deserializer, string key)
-		{
-			Parts = deserializer.DeserializeClassCollection<TransformationPart>("Parts");
-		}
+		//public void Deserialize(IDeserializer deserializer, string key)
+		//{
+		//	Parts = deserializer.DeserializeClassCollection<TransformationPart>("Parts");
+		//}
 
 		public OszacowaniePartie<int> Run(OszacowaniePartie<double> poll, double electionThreshold = 0)
 		{
@@ -78,9 +78,9 @@ namespace DHondtSymTest2.Mathematics
 				Calculate(okreg);
 			}
 
-			var suma = OszacowaniePartie<int>.Create(length);
-			suma = Oszacowanie.Okregi.Values.Aggregate(suma, (om, o) => om + o.ObliczoneMandaty);
-			return suma.ConvertTo<OszacowaniePartie<int>, int>();
+			var suma = OszacowaniePartie<int>.Create<OszacowaniePartie<int>>(length);
+			suma = Oszacowanie.Okregi.Values.Aggregate(suma, (om, o) => OszacowaniePartie<int>.Add<OszacowaniePartie<int>>(om, o.ObliczoneMandaty));
+			return suma;
 		}
 
 		public static void Calculate(OkregOszacowania okreg)

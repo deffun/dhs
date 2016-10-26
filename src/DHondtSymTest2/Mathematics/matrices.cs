@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Shishaq.Serialization;
+//using Shishaq.Serialization;
 
 namespace DHondtSymTest2.Mathematics
 {
-	public class Matrix<T> : IEquatable<Matrix<T>>, ISerializable
+	public class Matrix<T> : IEquatable<Matrix<T>>//, ISerializable
 		where T : IConvertible
 	{
 		private int _width;
@@ -34,19 +34,19 @@ namespace DHondtSymTest2.Mathematics
 			return result;
 		}
 
-		public void Serialize(ISerializer serializer, string key)
-		{
-			serializer.Serialize(_width, "Width");
-			serializer.Serialize(_height, "Height");
-			serializer.SerializePrimitiveDictionary(_data, "Data");
-		}
+		//public void Serialize(ISerializer serializer, string key)
+		//{
+		//	serializer.Serialize(_width, "Width");
+		//	serializer.Serialize(_height, "Height");
+		//	serializer.SerializePrimitiveDictionary(_data, "Data");
+		//}
 
-		public void Deserialize(IDeserializer deserializer, string key)
-		{
-			_width = deserializer.DeserializeInt32("Width");
-			_height = deserializer.DeserializeInt32("Height");
-			_data = deserializer.DeserializePrimitiveDictionary<long, T>("Data");
-		}
+		//public void Deserialize(IDeserializer deserializer, string key)
+		//{
+		//	_width = deserializer.DeserializeInt32("Width");
+		//	_height = deserializer.DeserializeInt32("Height");
+		//	_data = deserializer.DeserializePrimitiveDictionary<long, T>("Data");
+		//}
 
 		public override int GetHashCode()
 		{
