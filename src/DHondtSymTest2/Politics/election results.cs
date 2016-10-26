@@ -1235,20 +1235,24 @@ namespace DHondtSymTest2.Politics
 			if (electionResults == null || !electionResults.Any())
 				throw new Exception("Known election result collection cannot be null.");
 
-			var teryt = electionResults
-				.ToDictionary(p => p.Key, p => p.Value.ConvertTo<double>());
+			var terytResults = electionResults
+				.ToDictionary(p => p.Key, p => (Vector<int>)p.Value);
+			var terytRatios = terytResults
+				.ToDictionary(t => t.Key, t => t.Value.ConvertTo<double>() / t.Value.GetSum());
 			var length = electionResults.First().Value.Length;
-			var total = Vector<double>.Create(length);
-			total = teryt
-				.Aggregate(total, (c, p) => c + p.Value);
+			var totalRatio = Vector<double>.Create(length);
+			totalRatio = terytResults.Values
+				.Aggregate(totalRatio, (c, t) => c + t.ConvertTo<double>());
+			totalRatio = totalRatio / totalRatio.GetSum();
 
-			return new TransformationPart
+            return new TransformationPart
 			{
 				Name = name,
 				Weight = weight,
 				Flows = flows,
-				TerytResults = teryt,
-				TotalResults = total,
+				TotalRatio = totalRatio,
+				TerytRatios = terytRatios,
+				TerytResults = terytResults,
 			};
 		}
 

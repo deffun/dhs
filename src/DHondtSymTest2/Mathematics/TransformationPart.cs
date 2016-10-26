@@ -10,24 +10,25 @@ namespace DHondtSymTest2.Mathematics
 		public string Name { get; set; }
 		public double Weight { get; set; }
 		public Matrix<double> Flows { get; set; }
-		public Vector<double> TotalResults { get; set; }
-		public Dictionary<Teryt, Vector<double>> TerytResults { get; set; }
+		public Vector<double> TotalRatio { get; set; }
+		public Dictionary<Teryt, Vector<double>> TerytRatios { get; set; }
+		public Dictionary<Teryt, Vector<int>> TerytResults { get; set; }
 
-		public void Initialize<TVectorInt>(string name, double weight, IDictionary<Teryt, TVectorInt> electionResults)
-			where TVectorInt : Vector<int>
-		{
-			Name = name;
-			Weight = weight;
-			TerytResults = electionResults.ToDictionary(p => p.Key, p => p.Value.ConvertTo<double>());
-			if (!electionResults.Any())
-				return;
+		//public void Initialize<TVectorInt>(string name, double weight, IDictionary<Teryt, TVectorInt> electionResults)
+		//	where TVectorInt : Vector<int>
+		//{
+		//	Name = name;
+		//	Weight = weight;
+		//	TerytRatios = electionResults.ToDictionary(p => p.Key, p => p.Value.ConvertTo<double>());
+		//	if (!electionResults.Any())
+		//		return;
 
-			TotalResults = Vector<double>.Create(electionResults.First().Value.Length);
-			foreach (var tr in TerytResults)
-			{
-				TotalResults += tr.Value;
-			}
-		}
+		//	TotalRatio = Vector<double>.Create(electionResults.First().Value.Length);
+		//	foreach (var tr in TerytRatios)
+		//	{
+		//		TotalRatio += tr.Value;
+		//	}
+		//}
 
 		//public void Serialize(ISerializer serializer, string key)
 		//{
@@ -49,19 +50,19 @@ namespace DHondtSymTest2.Mathematics
 
 		public Vector<double> GetTerytElectionTransformation(Teryt teryt)
 		{
-			var et = Flows * TerytResults[teryt];
+			var et = Flows * TerytRatios[teryt];
 			return et;
 		}
 
 		public Vector<double> GetTotalElectionTransformation()
 		{
-			var et = Flows * TotalResults;
+			var et = Flows * TotalRatio;
 			return et;
 		}
 
 		public Vector<double> GetPollFactor(Vector<double> electionTransformation, Vector<double> poll)
 		{
-			var pf = 1.0 / poll / electionTransformation;
+			var pf = poll / electionTransformation;
 			return pf;
 		}
 

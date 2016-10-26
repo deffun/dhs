@@ -50,7 +50,7 @@ namespace DHondtSymTest2.Politics
 		Szczecin,
 	}
 
-	[DebuggerDisplay("{Nr}: {Nazwa}")]
+	[DebuggerDisplay("{Numer}: {Nazwa}")]
 	public class OkregOszacowania
 	{
 		public OkregOszacowaniaEnum Enum;
