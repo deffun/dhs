@@ -107,13 +107,6 @@ namespace DHondtSymTest2.Mathematics
 						var px = f * p;
 						var terytResult = Parts[i].Flows * Parts[i].TerytResults[jt.Teryt].ConvertTo<double>() * px;
 
-
-						//for (var i = 0; i < Parts.Length; i++)
-						//{
-						//	var et = Parts[i].GetTerytElectionTransformation(jt.Teryt);
-						//	var weightedEstimation = Parts[i].GetElectionWeigthedEstimation(et, pollFactors[i]);
-						//	sumaOkregowa += weightedEstimation;
-						//}
 						sumaOkregowa += terytResult;
 					}
 					okreg.Glosy = sumaOkregowa
@@ -123,37 +116,10 @@ namespace DHondtSymTest2.Mathematics
 
 			}
 
-			////var pollFactors = new Vector<double>[Parts.Length];
-			//for (var i = 0; i < Parts.Length; i++)
-			//{
-			//	var PM = p / Parts[i].TotalResults;
-
-			//	var et = Parts[i].GetTotalElectionTransformation();
-			//	pollFactors[i] = Parts[i].GetPollFactor(et, p);
-			//}
-			//var length = pollFactors.First().Length;
-			//foreach (var okreg in Oszacowanie.Okregi.Values)
-			//{
-			//	var sumaOkregowa = Vector<double>.Create(length);
-			//	foreach (var jt in okreg.JednostkiTerytorialne)
-			//	{
-			//		for (var i = 0; i < Parts.Length; i++)
-			//		{
-			//			var et = Parts[i].GetTerytElectionTransformation(jt.Teryt);
-			//			var weightedEstimation = Parts[i].GetElectionWeigthedEstimation(et, pollFactors[i]);
-			//			sumaOkregowa += weightedEstimation;
-			//		}
-
-			//	}
-			//	okreg.Glosy = sumaOkregowa
-			//		.ConvertTo<OszacowaniePartie<int>, int>();
-			//	Calculate(okreg);
-			//}
-
-			//var suma = OszacowaniePartie<int>.Create<OszacowaniePartie<int>>(length);
-			//suma = Oszacowanie.Okregi.Values.Aggregate(suma, (om, o) => OszacowaniePartie<int>.Add<OszacowaniePartie<int>>(om, o.ObliczoneMandaty));
-			//return suma;
-			return null;
+			var suma = OszacowaniePartie<int>.Create<OszacowaniePartie<int>>(OszacowaniePartie<int>.Size);
+			suma = Oszacowanie.Okregi.Values
+				.Aggregate(suma, (om, o) => OszacowaniePartie<int>.Add<OszacowaniePartie<int>>(om, o.ObliczoneMandaty));
+			return suma;
 		}
 
 		public static void Calculate(OkregOszacowania okreg)

@@ -6,6 +6,8 @@ namespace DHondtSymTest2.Politics
 	public class Sejmiki2014Partie<T> : Vector<T>
 		where T : IConvertible
 	{
+		public const int Size = 7;
+
 		/// <summary>
 		/// Prawo i Sprawiedliwość
 		/// </summary>
@@ -43,13 +45,15 @@ namespace DHondtSymTest2.Politics
 
 		public Sejmiki2014Partie()
 		{
-			Initialize(7);
+			Initialize(Size);
 		}
 	}
 
 	public class Prezydent2015Kandydaci<T> : Vector<T>
 		where T : IConvertible
 	{
+		public const int Size = 11;
+
 		public T GrzegorzBraun { get { return this[0]; } set { this[0] = value; } }
 
 		/// <summary>
@@ -92,13 +96,15 @@ namespace DHondtSymTest2.Politics
 
 		public Prezydent2015Kandydaci()
 		{
-			Initialize(11);
+			Initialize(Size);
 		}
 	}
 
 	public class Sejm2015Partie<T> : Vector<T>
 		where T : IConvertible
 	{
+		public const int Size = 8;
+
 		/// <summary>
 		/// Prawo i Sprawiedliwość
 		/// </summary>
@@ -141,13 +147,14 @@ namespace DHondtSymTest2.Politics
 
 		public Sejm2015Partie()
 		{
-			Initialize(8);
+			Initialize(Size);
 		}
 	}
 
 	public class OszacowaniePartie<T> : Vector<T>
 		where T : IConvertible
 	{
+		public const int Size = 8;
 		//public static Sejm2019Partie Zero = new Sejm2019Partie();
 
 		/// <summary>
@@ -192,7 +199,7 @@ namespace DHondtSymTest2.Politics
 
 		public OszacowaniePartie()
 		{
-			Initialize(8);
+			Initialize(Size);
 		}
 	}
 
