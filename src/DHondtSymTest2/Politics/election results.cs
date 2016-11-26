@@ -837,7 +837,7 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("0226"), new Sejm2015Partie<int> { Pis = 5046, Po = 3958, Razem = 581, Korwin = 667, Psl = 659, Zlew = 1368, Kukiz15 = 1265, Nowoczesna = 982 } },
 			{ new Teryt("0261"), new Sejm2015Partie<int> { Pis = 8824, Po = 10353, Razem = 1202, Korwin = 1320, Psl = 785, Zlew = 3751, Kukiz15 = 2589, Nowoczesna = 3793 } },
 			{ new Teryt("0262"), new Sejm2015Partie<int> { Pis = 13340, Po = 10308, Razem = 1358, Korwin = 1699, Psl = 757, Zlew = 4463, Kukiz15 = 3690, Nowoczesna = 3346 } },
-			{ new Teryt("0264"), new Sejm2015Partie<int> { Pis = 29581, Po = 30565, Razem = 4701, Korwin = 6165, Psl = 975, Zlew = 6069, Kukiz15 = 8298, Nowoczesna = 11261 } },
+			{ new Teryt("0264"), new Sejm2015Partie<int> { Pis = 86434, Po = 94866, Razem = 14148, Korwin = 17303, Psl = 3280, Zlew = 18941, Kukiz15 = 24848, Nowoczesna = 37975 } },
 			{ new Teryt("0265"), new Sejm2015Partie<int> { Pis = 10618, Po = 16774, Razem = 1472, Korwin = 1593, Psl = 414, Zlew = 3831, Kukiz15 = 3121, Nowoczesna = 2400 } },
 			{ new Teryt("0401"), new Sejm2015Partie<int> { Pis = 7440, Po = 4744, Razem = 658, Korwin = 628, Psl = 1363, Zlew = 2292, Kukiz15 = 1730, Nowoczesna = 1048 } },
 			{ new Teryt("0402"), new Sejm2015Partie<int> { Pis = 9047, Po = 4734, Razem = 658, Korwin = 721, Psl = 3957, Zlew = 1874, Kukiz15 = 3277, Nowoczesna = 1090 } },
@@ -858,9 +858,9 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("0417"), new Sejm2015Partie<int> { Pis = 3040, Po = 2493, Razem = 400, Korwin = 462, Psl = 866, Zlew = 1086, Kukiz15 = 1117, Nowoczesna = 565 } },
 			{ new Teryt("0418"), new Sejm2015Partie<int> { Pis = 10199, Po = 4306, Razem = 876, Korwin = 751, Psl = 2452, Zlew = 3348, Kukiz15 = 2037, Nowoczesna = 987 } },
 			{ new Teryt("0419"), new Sejm2015Partie<int> { Pis = 7057, Po = 5808, Razem = 783, Korwin = 903, Psl = 2126, Zlew = 2430, Kukiz15 = 1744, Nowoczesna = 1698 } },
-			{ new Teryt("0461"), new Sejm2015Partie<int> { Pis = 23578, Po = 26059, Razem = 3180, Korwin = 3943, Psl = 1473, Zlew = 8111, Kukiz15 = 5615, Nowoczesna = 7142 } },
+			{ new Teryt("0461"), new Sejm2015Partie<int> { Pis = 45271, Po = 49990, Razem = 5890, Korwin = 7349, Psl = 2766, Zlew = 15453, Kukiz15 = 10692, Nowoczesna = 13142 } },
 			{ new Teryt("0462"), new Sejm2015Partie<int> { Pis = 9805, Po = 11532, Razem = 1306, Korwin = 1605, Psl = 745, Zlew = 3954, Kukiz15 = 2520, Nowoczesna = 2007 } },
-			{ new Teryt("0463"), new Sejm2015Partie<int> { Pis = 23157, Po = 24063, Razem = 3011, Korwin = 3601, Psl = 941, Zlew = 8253, Kukiz15 = 4784, Nowoczesna = 7859 } },
+			{ new Teryt("0463"), new Sejm2015Partie<int> { Pis = 26177, Po = 26978, Razem = 3411, Korwin = 4145, Psl = 1078, Zlew = 9173, Kukiz15 = 5512, Nowoczesna = 8628 } },
 			{ new Teryt("0464"), new Sejm2015Partie<int> { Pis = 12645, Po = 11796, Razem = 1854, Korwin = 1401, Psl = 790, Zlew = 6519, Kukiz15 = 3563, Nowoczesna = 2960 } },
 			{ new Teryt("0601"), new Sejm2015Partie<int> { Pis = 19593, Po = 4686, Razem = 874, Korwin = 1734, Psl = 4763, Zlew = 4445, Kukiz15 = 3572, Nowoczesna = 1078 } },
 			{ new Teryt("0602"), new Sejm2015Partie<int> { Pis = 21309, Po = 2951, Razem = 716, Korwin = 1854, Psl = 5782, Zlew = 1641, Kukiz15 = 3697, Nowoczesna = 1021 } },
@@ -884,7 +884,7 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("0620"), new Sejm2015Partie<int> { Pis = 21378, Po = 3238, Razem = 908, Korwin = 1458, Psl = 4082, Zlew = 1630, Kukiz15 = 4308, Nowoczesna = 1301 } },
 			{ new Teryt("0661"), new Sejm2015Partie<int> { Pis = 9535, Po = 4177, Razem = 479, Korwin = 1247, Psl = 1123, Zlew = 4165, Kukiz15 = 2099, Nowoczesna = 989 } },
 			{ new Teryt("0662"), new Sejm2015Partie<int> { Pis = 10267, Po = 5118, Razem = 890, Korwin = 1200, Psl = 1313, Zlew = 2433, Kukiz15 = 3088, Nowoczesna = 1351 } },
-			{ new Teryt("0663"), new Sejm2015Partie<int> { Pis = 31842, Po = 19779, Razem = 2564, Korwin = 4932, Psl = 1884, Zlew = 7077, Kukiz15 = 6347, Nowoczesna = 5950 } },
+			{ new Teryt("0663"), new Sejm2015Partie<int> { Pis = 63956, Po = 37247, Razem = 4887, Korwin = 9176, Psl = 3799, Zlew = 13177, Kukiz15 = 12927, Nowoczesna = 10720 } },
 			{ new Teryt("0664"), new Sejm2015Partie<int> { Pis = 11166, Po = 4628, Razem = 711, Korwin = 1154, Psl = 1123, Zlew = 2174, Kukiz15 = 2950, Nowoczesna = 1768 } },
 			{ new Teryt("0801"), new Sejm2015Partie<int> { Pis = 6621, Po = 6339, Razem = 897, Korwin = 1393, Psl = 1265, Zlew = 1973, Kukiz15 = 2287, Nowoczesna = 1796 } },
 			{ new Teryt("0802"), new Sejm2015Partie<int> { Pis = 4428, Po = 4330, Razem = 557, Korwin = 617, Psl = 1645, Zlew = 1849, Kukiz15 = 1472, Nowoczesna = 1612 } },
@@ -921,7 +921,7 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("1019"), new Sejm2015Partie<int> { Pis = 9826, Po = 5603, Razem = 900, Korwin = 1177, Psl = 2359, Zlew = 1922, Kukiz15 = 2647, Nowoczesna = 1435 } },
 			{ new Teryt("1020"), new Sejm2015Partie<int> { Pis = 23818, Po = 18963, Razem = 3084, Korwin = 2871, Psl = 2787, Zlew = 5804, Kukiz15 = 5586, Nowoczesna = 5048 } },
 			{ new Teryt("1021"), new Sejm2015Partie<int> { Pis = 5294, Po = 1825, Razem = 428, Korwin = 448, Psl = 1296, Zlew = 747, Kukiz15 = 1123, Nowoczesna = 636 } },
-			{ new Teryt("1061"), new Sejm2015Partie<int> { Pis = 22661, Po = 27079, Razem = 3748, Korwin = 3789, Psl = 1627, Zlew = 9090, Kukiz15 = 5166, Nowoczesna = 7490 } },
+			{ new Teryt("1061"), new Sejm2015Partie<int> { Pis = 89406, Po = 103776, Razem = 15006, Korwin = 15310, Psl = 7140, Zlew = 34440, Kukiz15 = 22238, Nowoczesna = 29359 } },
 			{ new Teryt("1062"), new Sejm2015Partie<int> { Pis = 12132, Po = 7051, Razem = 1038, Korwin = 1231, Psl = 636, Zlew = 4255, Kukiz15 = 3405, Nowoczesna = 2255 } },
 			{ new Teryt("1063"), new Sejm2015Partie<int> { Pis = 7563, Po = 5741, Razem = 933, Korwin = 967, Psl = 811, Zlew = 1923, Kukiz15 = 1797, Nowoczesna = 1415 } },
 			{ new Teryt("1201"), new Sejm2015Partie<int> { Pis = 24548, Po = 5035, Razem = 1137, Korwin = 2043, Psl = 3415, Zlew = 1106, Kukiz15 = 4079, Nowoczesna = 2104 } },
@@ -943,7 +943,7 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("1217"), new Sejm2015Partie<int> { Pis = 14079, Po = 5424, Razem = 606, Korwin = 1064, Psl = 621, Zlew = 669, Kukiz15 = 1884, Nowoczesna = 1358 } },
 			{ new Teryt("1218"), new Sejm2015Partie<int> { Pis = 32024, Po = 13022, Razem = 2025, Korwin = 2570, Psl = 2411, Zlew = 2760, Kukiz15 = 6083, Nowoczesna = 3719 } },
 			{ new Teryt("1219"), new Sejm2015Partie<int> { Pis = 22650, Po = 10040, Razem = 1490, Korwin = 2954, Psl = 2460, Zlew = 1633, Kukiz15 = 4860, Nowoczesna = 3592 } },
-			{ new Teryt("1261"), new Sejm2015Partie<int> { Pis = 24189, Po = 21814, Razem = 3437, Korwin = 5083, Psl = 971, Zlew = 5236, Kukiz15 = 4160, Nowoczesna = 9061 } },
+			{ new Teryt("1261"), new Sejm2015Partie<int> { Pis = 128275, Po = 100760, Razem = 15669, Korwin = 24802, Psl = 5195, Zlew = 24458, Kukiz15 = 23220, Nowoczesna = 41137 } },
 			{ new Teryt("1262"), new Sejm2015Partie<int> { Pis = 19176, Po = 7921, Razem = 931, Korwin = 2487, Psl = 764, Zlew = 1522, Kukiz15 = 2898, Nowoczesna = 2239 } },
 			{ new Teryt("1263"), new Sejm2015Partie<int> { Pis = 20503, Po = 11308, Razem = 1392, Korwin = 2318, Psl = 1961, Zlew = 3421, Kukiz15 = 4578, Nowoczesna = 3024 } },
 			{ new Teryt("1401"), new Sejm2015Partie<int> { Pis = 6630, Po = 1270, Razem = 237, Korwin = 390, Psl = 1902, Zlew = 397, Kukiz15 = 796, Nowoczesna = 432 } },
@@ -985,10 +985,10 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("1438"), new Sejm2015Partie<int> { Pis = 12976, Po = 6409, Razem = 1124, Korwin = 1355, Psl = 1029, Zlew = 2219, Kukiz15 = 2354, Nowoczesna = 2148 } },
 			{ new Teryt("1461"), new Sejm2015Partie<int> { Pis = 9893, Po = 4229, Razem = 617, Korwin = 1134, Psl = 881, Zlew = 1343, Kukiz15 = 2076, Nowoczesna = 1045 } },
 			{ new Teryt("1462"), new Sejm2015Partie<int> { Pis = 19721, Po = 12235, Razem = 2282, Korwin = 2263, Psl = 2795, Zlew = 5483, Kukiz15 = 4328, Nowoczesna = 3515 } },
-			{ new Teryt("1463"), new Sejm2015Partie<int> { Pis = 34471, Po = 21529, Razem = 2411, Korwin = 3327, Psl = 2022, Zlew = 4756, Kukiz15 = 7367, Nowoczesna = 5744 } },
+			{ new Teryt("1463"), new Sejm2015Partie<int> { Pis = 38298, Po = 23889, Razem = 2694, Korwin = 3747, Psl = 2331, Zlew = 5213, Kukiz15 = 8276, Nowoczesna = 6399 } },
 			{ new Teryt("1464"), new Sejm2015Partie<int> { Pis = 14479, Po = 6179, Razem = 1167, Korwin = 2172, Psl = 1433, Zlew = 2376, Kukiz15 = 2901, Nowoczesna = 3167 } },
-			{ new Teryt("1465"), new Sejm2015Partie<int> { Pis = 23367, Po = 24866, Razem = 5247, Korwin = 3885, Psl = 544, Zlew = 8671, Kukiz15 = 4116, Nowoczesna = 11689 } },
-			{ new Teryt("1499"), new Sejm2015Partie<int> { Pis = 14241, Po = 9681, Razem = 2935, Korwin = 4576, Psl = 272, Zlew = 2462, Kukiz15 = 5882, Nowoczesna = 4914 } },
+			{ new Teryt("1465"), new Sejm2015Partie<int> { Pis = 268999, Po = 269413, Razem = 51188, Korwin = 45933, Psl = 7085, Zlew = 85710, Kukiz15 = 58364, Nowoczesna = 130681 } },
+			{ new Teryt("1499"), new Sejm2015Partie<int> { Pis = 58343, Po = 32259, Razem = 9475, Korwin = 21767, Psl = 797, Zlew = 7956, Kukiz15 = 26573, Nowoczesna = 15948 } },
 			{ new Teryt("1601"), new Sejm2015Partie<int> { Pis = 10645, Po = 7074, Razem = 898, Korwin = 1068, Psl = 1240, Zlew = 1861, Kukiz15 = 7166, Nowoczesna = 1964 } },
 			{ new Teryt("1602"), new Sejm2015Partie<int> { Pis = 6581, Po = 3694, Razem = 369, Korwin = 501, Psl = 561, Zlew = 774, Kukiz15 = 1629, Nowoczesna = 841 } },
 			{ new Teryt("1603"), new Sejm2015Partie<int> { Pis = 7709, Po = 9454, Razem = 920, Korwin = 1371, Psl = 818, Zlew = 2420, Kukiz15 = 3605, Nowoczesna = 2106 } },
@@ -1040,7 +1040,7 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("2012"), new Sejm2015Partie<int> { Pis = 5069, Po = 1510, Razem = 283, Korwin = 514, Psl = 1818, Zlew = 555, Kukiz15 = 1320, Nowoczesna = 336 } },
 			{ new Teryt("2013"), new Sejm2015Partie<int> { Pis = 15753, Po = 1893, Razem = 349, Korwin = 654, Psl = 1695, Zlew = 614, Kukiz15 = 1274, Nowoczesna = 549 } },
 			{ new Teryt("2014"), new Sejm2015Partie<int> { Pis = 9098, Po = 1779, Razem = 290, Korwin = 555, Psl = 1264, Zlew = 533, Kukiz15 = 1296, Nowoczesna = 778 } },
-			{ new Teryt("2061"), new Sejm2015Partie<int> { Pis = 28081, Po = 16702, Razem = 2382, Korwin = 4395, Psl = 2881, Zlew = 7427, Kukiz15 = 6725, Nowoczesna = 6380 } },
+			{ new Teryt("2061"), new Sejm2015Partie<int> { Pis = 47352, Po = 27033, Razem = 4074, Korwin = 7331, Psl = 4755, Zlew = 11974, Kukiz15 = 11666, Nowoczesna = 10400 } },
 			{ new Teryt("2062"), new Sejm2015Partie<int> { Pis = 11530, Po = 4110, Razem = 637, Korwin = 942, Psl = 616, Zlew = 1499, Kukiz15 = 1949, Nowoczesna = 1266 } },
 			{ new Teryt("2063"), new Sejm2015Partie<int> { Pis = 9841, Po = 5443, Razem = 794, Korwin = 1312, Psl = 1292, Zlew = 1929, Kukiz15 = 2600, Nowoczesna = 1248 } },
 			{ new Teryt("2201"), new Sejm2015Partie<int> { Pis = 8883, Po = 8005, Razem = 899, Korwin = 1043, Psl = 1174, Zlew = 1598, Kukiz15 = 1944, Nowoczesna = 1448 } },
@@ -1059,10 +1059,12 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("2214"), new Sejm2015Partie<int> { Pis = 13090, Po = 12359, Razem = 1559, Korwin = 1899, Psl = 1584, Zlew = 2312, Kukiz15 = 3240, Nowoczesna = 2431 } },
 			{ new Teryt("2215"), new Sejm2015Partie<int> { Pis = 25888, Po = 25390, Razem = 3327, Korwin = 3923, Psl = 2170, Zlew = 4685, Kukiz15 = 7319, Nowoczesna = 6410 } },
 			{ new Teryt("2216"), new Sejm2015Partie<int> { Pis = 3224, Po = 3143, Razem = 424, Korwin = 544, Psl = 1555, Zlew = 911, Kukiz15 = 958, Nowoczesna = 623 } },
-			{ new Teryt("2261"), new Sejm2015Partie<int> { Pis = 26308, Po = 33833, Razem = 4099, Korwin = 5022, Psl = 904, Zlew = 5580, Kukiz15 = 6466, Nowoczesna = 10165 } },
-			{ new Teryt("2262"), new Sejm2015Partie<int> { Pis = 24742, Po = 37121, Razem = 4455, Korwin = 4887, Psl = 978, Zlew = 6433, Kukiz15 = 7142, Nowoczesna = 12121 } },
+			{ new Teryt("2261"), new Sejm2015Partie<int> { Pis = 60812, Po = 82117, Razem = 8819, Korwin = 11576, Psl = 1822, Zlew = 13003, Kukiz15 = 13634, Nowoczesna = 23692 } },
+			{ new Teryt("2262"), new Sejm2015Partie<int> { Pis = 30179, Po = 44042, Razem = 5366, Korwin = 5787, Psl = 1177, Zlew = 7957, Kukiz15 = 8801, Nowoczesna = 13813 } },
 			{ new Teryt("2263"), new Sejm2015Partie<int> { Pis = 10136, Po = 12272, Razem = 1599, Korwin = 1575, Psl = 497, Zlew = 3914, Kukiz15 = 2433, Nowoczesna = 3051 } },
 			{ new Teryt("2264"), new Sejm2015Partie<int> { Pis = 5136, Po = 7777, Razem = 780, Korwin = 877, Psl = 128, Zlew = 1189, Kukiz15 = 978, Nowoczesna = 2527 } },
+			{ new Teryt("2298"), new Sejm2015Partie<int> { Pis = 3, Po = 16, Razem = 3, Korwin = 2, Psl = 1, Zlew = 2, Kukiz15 = 1, Nowoczesna = 2 } },
+			{ new Teryt("2299"), new Sejm2015Partie<int> { Pis = 34, Po = 26, Razem = 2, Korwin = 15, Psl = 3, Zlew = 9, Kukiz15 = 22, Nowoczesna = 18 } },
 			{ new Teryt("2401"), new Sejm2015Partie<int> { Pis = 16521, Po = 15177, Razem = 2801, Korwin = 2990, Psl = 1103, Zlew = 9627, Kukiz15 = 6346, Nowoczesna = 6679 } },
 			{ new Teryt("2402"), new Sejm2015Partie<int> { Pis = 28814, Po = 17194, Razem = 2687, Korwin = 3389, Psl = 3428, Zlew = 4255, Kukiz15 = 6689, Nowoczesna = 6163 } },
 			{ new Teryt("2403"), new Sejm2015Partie<int> { Pis = 25284, Po = 19646, Razem = 2906, Korwin = 3338, Psl = 2501, Zlew = 6845, Kukiz15 = 7219, Nowoczesna = 5945 } },
@@ -1083,18 +1085,18 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("2461"), new Sejm2015Partie<int> { Pis = 28092, Po = 21614, Razem = 3459, Korwin = 3975, Psl = 1499, Zlew = 5707, Kukiz15 = 6698, Nowoczesna = 8649 } },
 			{ new Teryt("2462"), new Sejm2015Partie<int> { Pis = 17420, Po = 15746, Razem = 2640, Korwin = 2938, Psl = 1349, Zlew = 4557, Kukiz15 = 8628, Nowoczesna = 4521 } },
 			{ new Teryt("2463"), new Sejm2015Partie<int> { Pis = 10953, Po = 13114, Razem = 1812, Korwin = 2440, Psl = 349, Zlew = 2848, Kukiz15 = 4649, Nowoczesna = 3463 } },
-			{ new Teryt("2464"), new Sejm2015Partie<int> { Pis = 25187, Po = 18912, Razem = 2857, Korwin = 3184, Psl = 1109, Zlew = 11346, Kukiz15 = 8104, Nowoczesna = 5899 } },
+			{ new Teryt("2464"), new Sejm2015Partie<int> { Pis = 33196, Po = 24211, Razem = 3691, Korwin = 4293, Psl = 1446, Zlew = 13891, Kukiz15 = 10670, Nowoczesna = 7949 } },
 			{ new Teryt("2465"), new Sejm2015Partie<int> { Pis = 14456, Po = 12812, Razem = 2611, Korwin = 2460, Psl = 483, Zlew = 7905, Kukiz15 = 4941, Nowoczesna = 5223 } },
-			{ new Teryt("2466"), new Sejm2015Partie<int> { Pis = 18873, Po = 21463, Razem = 2753, Korwin = 3822, Psl = 941, Zlew = 5399, Kukiz15 = 7133, Nowoczesna = 8271 } },
+			{ new Teryt("2466"), new Sejm2015Partie<int> { Pis = 21347, Po = 24521, Razem = 3106, Korwin = 4248, Psl = 1032, Zlew = 6108, Kukiz15 = 7913, Nowoczesna = 9255 } },
 			{ new Teryt("2467"), new Sejm2015Partie<int> { Pis = 17152, Po = 7410, Razem = 1215, Korwin = 1531, Psl = 455, Zlew = 2653, Kukiz15 = 5086, Nowoczesna = 1601 } },
 			{ new Teryt("2468"), new Sejm2015Partie<int> { Pis = 13045, Po = 9517, Razem = 1493, Korwin = 1916, Psl = 1117, Zlew = 3481, Kukiz15 = 4187, Nowoczesna = 2974 } },
-			{ new Teryt("2469"), new Sejm2015Partie<int> { Pis = 25783, Po = 27732, Razem = 3790, Korwin = 4939, Psl = 882, Zlew = 6386, Kukiz15 = 7506, Nowoczesna = 10230 } },
+			{ new Teryt("2469"), new Sejm2015Partie<int> { Pis = 39255, Po = 42028, Razem = 5723, Korwin = 7498, Psl = 1454, Zlew = 9902, Kukiz15 = 11280, Nowoczesna = 14841 } },
 			{ new Teryt("2470"), new Sejm2015Partie<int> { Pis = 10779, Po = 8884, Razem = 1092, Korwin = 1612, Psl = 308, Zlew = 2135, Kukiz15 = 3179, Nowoczesna = 2103 } },
 			{ new Teryt("2471"), new Sejm2015Partie<int> { Pis = 8727, Po = 5493, Razem = 830, Korwin = 1368, Psl = 183, Zlew = 1248, Kukiz15 = 2100, Nowoczesna = 1434 } },
 			{ new Teryt("2472"), new Sejm2015Partie<int> { Pis = 20607, Po = 13806, Razem = 2069, Korwin = 2713, Psl = 407, Zlew = 3551, Kukiz15 = 6849, Nowoczesna = 3384 } },
 			{ new Teryt("2473"), new Sejm2015Partie<int> { Pis = 21467, Po = 14705, Razem = 1933, Korwin = 2909, Psl = 739, Zlew = 4006, Kukiz15 = 6418, Nowoczesna = 3694 } },
 			{ new Teryt("2474"), new Sejm2015Partie<int> { Pis = 7433, Po = 8311, Razem = 1181, Korwin = 1595, Psl = 307, Zlew = 2178, Kukiz15 = 2659, Nowoczesna = 2407 } },
-			{ new Teryt("2475"), new Sejm2015Partie<int> { Pis = 22226, Po = 21748, Razem = 3756, Korwin = 3924, Psl = 886, Zlew = 12770, Kukiz15 = 7228, Nowoczesna = 7361 } },
+			{ new Teryt("2475"), new Sejm2015Partie<int> { Pis = 24396, Po = 23723, Razem = 4106, Korwin = 4286, Psl = 969, Zlew = 13886, Kukiz15 = 7862, Nowoczesna = 7997 } },
 			{ new Teryt("2476"), new Sejm2015Partie<int> { Pis = 5611, Po = 5271, Razem = 773, Korwin = 965, Psl = 192, Zlew = 1243, Kukiz15 = 1928, Nowoczesna = 1138 } },
 			{ new Teryt("2477"), new Sejm2015Partie<int> { Pis = 19588, Po = 15214, Razem = 2339, Korwin = 3313, Psl = 532, Zlew = 3771, Kukiz15 = 5887, Nowoczesna = 5429 } },
 			{ new Teryt("2478"), new Sejm2015Partie<int> { Pis = 16695, Po = 18945, Razem = 2683, Korwin = 2934, Psl = 893, Zlew = 4966, Kukiz15 = 8168, Nowoczesna = 4099 } },
@@ -1133,7 +1135,7 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("2818"), new Sejm2015Partie<int> { Pis = 2120, Po = 1920, Razem = 203, Korwin = 260, Psl = 1666, Zlew = 605, Kukiz15 = 592, Nowoczesna = 260 } },
 			{ new Teryt("2819"), new Sejm2015Partie<int> { Pis = 1868, Po = 2128, Razem = 262, Korwin = 304, Psl = 532, Zlew = 659, Kukiz15 = 587, Nowoczesna = 354 } },
 			{ new Teryt("2861"), new Sejm2015Partie<int> { Pis = 14129, Po = 14698, Razem = 1962, Korwin = 2259, Psl = 930, Zlew = 3323, Kukiz15 = 3495, Nowoczesna = 3759 } },
-			{ new Teryt("2862"), new Sejm2015Partie<int> { Pis = 20774, Po = 23439, Razem = 3177, Korwin = 4017, Psl = 2486, Zlew = 7191, Kukiz15 = 6081, Nowoczesna = 7159 } },
+			{ new Teryt("2862"), new Sejm2015Partie<int> { Pis = 20791, Po = 23494, Razem = 3179, Korwin = 4029, Psl = 2490, Zlew = 7196, Kukiz15 = 6104, Nowoczesna = 7165 } },
 			{ new Teryt("3001"), new Sejm2015Partie<int> { Pis = 3922, Po = 5227, Razem = 740, Korwin = 622, Psl = 1628, Zlew = 1732, Kukiz15 = 1395, Nowoczesna = 1429 } },
 			{ new Teryt("3002"), new Sejm2015Partie<int> { Pis = 8554, Po = 9434, Razem = 1163, Korwin = 1154, Psl = 1564, Zlew = 2244, Kukiz15 = 2524, Nowoczesna = 1886 } },
 			{ new Teryt("3003"), new Sejm2015Partie<int> { Pis = 16859, Po = 12892, Razem = 1718, Korwin = 2188, Psl = 2382, Zlew = 9634, Kukiz15 = 4484, Nowoczesna = 3850 } },
@@ -1168,7 +1170,7 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("3061"), new Sejm2015Partie<int> { Pis = 13049, Po = 12244, Razem = 1636, Korwin = 1845, Psl = 1067, Zlew = 5475, Kukiz15 = 3534, Nowoczesna = 3679 } },
 			{ new Teryt("3062"), new Sejm2015Partie<int> { Pis = 11395, Po = 7363, Razem = 1663, Korwin = 1215, Psl = 612, Zlew = 4983, Kukiz15 = 2682, Nowoczesna = 2458 } },
 			{ new Teryt("3063"), new Sejm2015Partie<int> { Pis = 6240, Po = 8451, Razem = 850, Korwin = 1430, Psl = 569, Zlew = 3438, Kukiz15 = 1710, Nowoczesna = 3079 } },
-			{ new Teryt("3064"), new Sejm2015Partie<int> { Pis = 24519, Po = 35957, Razem = 5412, Korwin = 5224, Psl = 1043, Zlew = 9043, Kukiz15 = 5634, Nowoczesna = 13817 } },
+			{ new Teryt("3064"), new Sejm2015Partie<int> { Pis = 61166, Po = 91023, Razem = 12224, Korwin = 12491, Psl = 2792, Zlew = 22583, Kukiz15 = 14078, Nowoczesna = 36721 } },
 			{ new Teryt("3201"), new Sejm2015Partie<int> { Pis = 4592, Po = 4019, Razem = 574, Korwin = 499, Psl = 647, Zlew = 1546, Kukiz15 = 1182, Nowoczesna = 1249 } },
 			{ new Teryt("3202"), new Sejm2015Partie<int> { Pis = 3883, Po = 4077, Razem = 517, Korwin = 592, Psl = 1123, Zlew = 1306, Kukiz15 = 1229, Nowoczesna = 669 } },
 			{ new Teryt("3203"), new Sejm2015Partie<int> { Pis = 4931, Po = 5077, Razem = 694, Korwin = 660, Psl = 995, Zlew = 2158, Kukiz15 = 1724, Nowoczesna = 1235 } },
@@ -1188,7 +1190,7 @@ namespace DHondtSymTest2.Politics
 			{ new Teryt("3217"), new Sejm2015Partie<int> { Pis = 4694, Po = 5887, Razem = 642, Korwin = 657, Psl = 648, Zlew = 2226, Kukiz15 = 1472, Nowoczesna = 1039 } },
 			{ new Teryt("3218"), new Sejm2015Partie<int> { Pis = 2861, Po = 2991, Razem = 401, Korwin = 403, Psl = 1060, Zlew = 770, Kukiz15 = 768, Nowoczesna = 705 } },
 			{ new Teryt("3261"), new Sejm2015Partie<int> { Pis = 11323, Po = 14928, Razem = 2041, Korwin = 2327, Psl = 799, Zlew = 5333, Kukiz15 = 4711, Nowoczesna = 4482 } },
-			{ new Teryt("3262"), new Sejm2015Partie<int> { Pis = 24269, Po = 26298, Razem = 3737, Korwin = 4941, Psl = 1363, Zlew = 6706, Kukiz15 = 6746, Nowoczesna = 8155 } },
+			{ new Teryt("3262"), new Sejm2015Partie<int> { Pis = 47923, Po = 54911, Razem = 7665, Korwin = 9422, Psl = 2647, Zlew = 13797, Kukiz15 = 12866, Nowoczesna = 17115 } },
 			{ new Teryt("3263"), new Sejm2015Partie<int> { Pis = 4515, Po = 5089, Razem = 613, Korwin = 734, Psl = 320, Zlew = 2282, Kukiz15 = 1575, Nowoczesna = 1467 } },
 			#endregion
 		};
@@ -1240,19 +1242,20 @@ namespace DHondtSymTest2.Politics
 			var terytRatios = terytResults
 				.ToDictionary(t => t.Key, t => t.Value.ConvertTo<double>() / t.Value.GetSum());
 			var length = electionResults.First().Value.Length;
-			var totalRatio = Vector<double>.Create(length);
-			totalRatio = terytResults.Values
-				.Aggregate(totalRatio, (c, t) => c + t.ConvertTo<double>());
-			totalRatio = totalRatio / totalRatio.GetSum();
+			var totalResult = Vector<int>.Create(length);
+			totalResult = terytResults.Values
+				.Aggregate(totalResult, (c, t) => c + t);
+			var totalRatio = totalResult.ConvertTo<double>() / totalResult.GetSum();
 
-            return new TransformationPart
+			return new TransformationPart
 			{
 				Name = name,
 				Weight = weight,
 				Flows = flows,
+				TotalResult = totalResult,
 				TotalRatio = totalRatio,
-				TerytRatios = terytRatios,
 				TerytResults = terytResults,
+				TerytRatios = terytRatios,
 			};
 		}
 

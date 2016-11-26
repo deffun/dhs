@@ -10,9 +10,10 @@ namespace DHondtSymTest2.Mathematics
 		public string Name { get; set; }
 		public double Weight { get; set; }
 		public Matrix<double> Flows { get; set; }
+		public Vector<int> TotalResult { get; set; }
 		public Vector<double> TotalRatio { get; set; }
-		public Dictionary<Teryt, Vector<double>> TerytRatios { get; set; }
 		public Dictionary<Teryt, Vector<int>> TerytResults { get; set; }
+		public Dictionary<Teryt, Vector<double>> TerytRatios { get; set; }
 
 		//public void Initialize<TVectorInt>(string name, double weight, IDictionary<Teryt, TVectorInt> electionResults)
 		//	where TVectorInt : Vector<int>
