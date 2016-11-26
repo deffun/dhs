@@ -13,6 +13,14 @@ namespace DHondtSymTest.Tests
 			var t = new Transformation();
 			var poll = new OszacowaniePartie<double>
 			{
+				//Pis = 37.58,
+				//Po = 24.09,
+				//Razem = 3.62,
+				//Korwin = 4.76,
+				//Psl = 5.13,
+				//Zlew = 7.55,
+				//Kukiz15 = 8.81,
+				//Nowoczesna = 7.60,
 				//Pis = 40,
 				//Po = 18,
 				//Razem = 1.5,
@@ -21,14 +29,14 @@ namespace DHondtSymTest.Tests
 				//Zlew = 3,
 				//Kukiz15 = 10,
 				//Nowoczesna = 9,
-				Pis = 37.58,
-				Po = 24.09,
-				Razem = 3.62,
-				Korwin = 4.76,
-				Psl = 5.13,
-				Zlew = 7.55,
-				Kukiz15 = 8.81,
-				Nowoczesna = 7.60,
+				Pis = 34,
+				Po = 19,
+				Razem = 2,
+				Korwin = 1,
+				Psl = 5,
+				Zlew = 4,
+				Kukiz15 = 8,
+				Nowoczesna = 9,
 			};
 			var electionThreshold = new OszacowaniePartie<double>
 			{

@@ -45,45 +45,6 @@ namespace DHondtSymTest2.Mathematics
 		//	Parts = deserializer.DeserializeClassCollection<TransformationPart>("Parts");
 		//}
 
-		public OszacowaniePartie<int> Run1(OszacowaniePartie<double> poll, double electionThreshold = 0)
-		{
-			if (Parts == null || !Parts.Any())
-				throw new NullReferenceException("No transformation part is registered.");
-
-			var p = poll / poll.GetSum();
-			p.ForEach(i => p[i] >= electionThreshold ? p[i] : 0);
-			p = p / p.GetSum();
-
-			var pollFactors = new Vector<double>[Parts.Length];
-			for (var i = 0; i < Parts.Length; i++)
-			{
-				var et = Parts[i].GetTotalElectionTransformation();
-				pollFactors[i] = Parts[i].GetPollFactor(et, p);
-			}
-			var length = pollFactors.First().Length;
-			foreach (var okreg in Oszacowanie.Okregi.Values)
-			{
-				var sumaOkregowa = Vector<double>.Create(length);
-				foreach (var jt in okreg.JednostkiTerytorialne)
-				{
-					for (var i = 0; i < Parts.Length; i++)
-					{
-						var et = Parts[i].GetTerytElectionTransformation(jt.Teryt);
-						var weightedEstimation = Parts[i].GetElectionWeigthedEstimation(et, pollFactors[i]);
-						sumaOkregowa += weightedEstimation;
-					}
-
-				}
-				okreg.Glosy = sumaOkregowa
-					.ConvertTo<OszacowaniePartie<int>, int>();
-				Calculate(okreg);
-			}
-
-			var suma = OszacowaniePartie<int>.Create<OszacowaniePartie<int>>(length);
-			suma = Oszacowanie.Okregi.Values.Aggregate(suma, (om, o) => OszacowaniePartie<int>.Add<OszacowaniePartie<int>>(om, o.ObliczoneMandaty));
-			return suma;
-		}
-
 		public OszacowaniePartie<int> Run(OszacowaniePartie<double> poll, OszacowaniePartie<double> electionThreshold = null)
 		{
 			if (Parts == null || !Parts.Any())
@@ -97,19 +58,18 @@ namespace DHondtSymTest2.Mathematics
 
 			for (var i = 0; i < Parts.Length; i++)
 			{
-				var et = Parts[i].GetTotalElectionTransformation();
+				var etr = Parts[i].GetTotalTranformedResult();
+				var pf = Parts[i].GetPollFactor(etr, p);
 
 				foreach (var okreg in Oszacowanie.Okregi.Values)
 				{
-					var sumaOkregowa = Vector<double>.Create(et.Length);
+					var sumaOkregowa = Vector<double>.Create(etr.Length);
 					foreach (var jt in okreg.JednostkiTerytorialne)
 					{
-						var etx = Parts[i].GetTerytElectionTransformation(jt.Teryt);
-						var f = etx / et;
-						var px = f * p;
-						var terytResult = Parts[i].Flows * Parts[i].TerytResults[jt.Teryt].ConvertTo<double>() * px;
+						var etrx = Parts[i].GetTerytTranformedResult(jt.Teryt);
+						var estx = Parts[i].GetElectionWeigthedEstimation(etrx, pf);
 
-						sumaOkregowa += terytResult;
+						sumaOkregowa += estx;
 					}
 					okreg.Glosy = sumaOkregowa
 						.ConvertTo<OszacowaniePartie<int>, int>();

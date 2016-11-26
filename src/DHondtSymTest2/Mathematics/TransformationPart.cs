@@ -49,27 +49,28 @@ namespace DHondtSymTest2.Mathematics
 		//	TerytResults = deserializer.DeserializeClassDictionary<Teryt, Vector<double>>("TerytResults");
 		//}
 
-		public Vector<double> GetTerytElectionTransformation(Teryt teryt)
+		public Vector<double> GetTerytTranformedResult(Teryt teryt)
 		{
-			var et = Flows * TerytRatios[teryt];
+			var et = Flows * TerytResults[teryt].ConvertTo<double>();
 			return et;
 		}
 
-		public Vector<double> GetTotalElectionTransformation()
+		public Vector<double> GetTotalTranformedResult()
 		{
-			var et = Flows * TotalRatio;
+			var et = Flows * TotalResult.ConvertTo<double>();
 			return et;
 		}
 
-		public Vector<double> GetPollFactor(Vector<double> electionTransformation, Vector<double> poll)
+		public Vector<double> GetPollFactor(Vector<double> electionTransformationResult, Vector<double> poll)
 		{
-			var pf = poll / electionTransformation;
+			var et = electionTransformationResult / electionTransformationResult.GetSum();
+			var pf = poll / et;
 			return pf;
 		}
 
-		public Vector<double> GetElectionWeigthedEstimation(Vector<double> electionTransformation, Vector<double> pollFactor)
+		public Vector<double> GetElectionWeigthedEstimation(Vector<double> electionTransformationResult, Vector<double> pollFactor)
 		{
-			var ee = Weight * electionTransformation * pollFactor;
+			var ee = Weight * electionTransformationResult * pollFactor;
 			return ee;
 		}
 
