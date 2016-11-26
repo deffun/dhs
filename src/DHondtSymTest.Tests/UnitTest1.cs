@@ -30,7 +30,18 @@ namespace DHondtSymTest.Tests
 				Kukiz15 = 8.81,
 				Nowoczesna = 7.60,
 			};
-			var o = t.Run(poll, .05);
+			var electionThreshold = new OszacowaniePartie<double>
+			{
+				Pis = 8,
+				Po = 5,
+				Razem = 5,
+				Korwin = 5,
+				Psl = 5,
+				Zlew = 8,
+				Kukiz15 = 5,
+				Nowoczesna = 5,
+			};
+			var o = t.Run(poll, electionThreshold);
 		}
 
 		public void TestSavingTranformations()

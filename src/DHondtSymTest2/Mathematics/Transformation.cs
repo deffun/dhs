@@ -84,13 +84,15 @@ namespace DHondtSymTest2.Mathematics
 			return suma;
 		}
 
-		public OszacowaniePartie<int> Run(OszacowaniePartie<double> poll, double electionThreshold = 0)
+		public OszacowaniePartie<int> Run(OszacowaniePartie<double> poll, OszacowaniePartie<double> electionThreshold = null)
 		{
 			if (Parts == null || !Parts.Any())
 				throw new NullReferenceException("No transformation part is registered.");
 
 			var p = poll / poll.GetSum();
-			p.ForEach(i => p[i] >= electionThreshold ? p[i] : 0);
+			var eth = electionThreshold / 100;
+			if (electionThreshold != null)
+				p.ForEach(i => p[i] >= eth[i] ? p[i] : 0);
 			p = p / p.GetSum();
 
 			for (var i = 0; i < Parts.Length; i++)
