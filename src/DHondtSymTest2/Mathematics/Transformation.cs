@@ -12,11 +12,16 @@ namespace DHondtSymTest2.Mathematics
 		public const string DataFormatName = "DHST";
 		public const int DataFormatVersion = 1;
 
-		public TransformationPart[] Parts;
+		public static TransformationPart[] Parts;
 
-		public Transformation()
+		static Transformation()
 		{
-			Parts = TransformationPartRegistry.GetParts();
+			Parts = new TransformationPart[]
+			{
+				GeneratePart("Sejmiki 2014", .015, new WynikiSejmiki2014(), new KonwerterSejmiki2014Sejm2015()),
+				GeneratePart("Prezydent 2015", .035, new WynikiPrezydent2015(), new KonwerterPrezydent2015Sejm2015()),
+				GeneratePart("Sejm 2015", .95, new WynikiSejm2015()),
+			};
 		}
 
 		//public void Serialize(Stream outputStream)
@@ -45,6 +50,41 @@ namespace DHondtSymTest2.Mathematics
 		//	Parts = deserializer.DeserializeClassCollection<TransformationPart>("Parts");
 		//}
 
+		private static TransformationPart GeneratePart<TElecteeVector>(string name, double weight, IOriginalElectionResults<TElecteeVector> originalElectionResults)
+			where TElecteeVector : Vector<int>
+		{
+			if (originalElectionResults == null || originalElectionResults.Details == null || !originalElectionResults.Details.Any())
+				throw new Exception("Known election result collection cannot be null.");
+
+			var terytResults = originalElectionResults.Details
+				.ToDictionary(p => p.Key, p => (Vector<int>)p.Value);
+			var terytRatios = terytResults
+				.ToDictionary(t => t.Key, t => t.Value.ConvertTo<double>() / t.Value.GetSum());
+			var length = originalElectionResults.Details.First().Value.Length;
+			var totalResult = Vector<int>.Create(length);
+			totalResult = terytResults.Values
+				.Aggregate(totalResult, (c, t) => c + t);
+			var totalRatio = totalResult.ConvertTo<double>() / totalResult.GetSum();
+
+			return new TransformationPart
+			{
+				Name = name,
+				Weight = weight,
+				TotalResult = totalResult,
+				TotalRatio = totalRatio,
+				TerytResults = terytResults,
+				TerytRatios = terytRatios,
+				Convert = null,
+			};
+		}
+
+		private static TransformationPart GeneratePart(string name, double weight, IOriginalElectionResults<Vector<int>> originalElectionResults, IElecteeVectorConverter<Vector<int>, Vector<double>> electeeVectorConverter = null)
+		{
+			var transformationPart = GeneratePart(name, weight, originalElectionResults);
+			transformationPart.Convert = sourceVector => electeeVectorConverter.Convert(sourceVector);
+			return transformationPart;
+		}
+
 		public OszacowaniePartie<int> Run(OszacowaniePartie<double> poll, OszacowaniePartie<double> electionThreshold = null)
 		{
 			if (Parts == null || !Parts.Any())
@@ -58,7 +98,7 @@ namespace DHondtSymTest2.Mathematics
 
 			for (var i = 0; i < Parts.Length; i++)
 			{
-				var etr = Parts[i].GetTotalTranformedResult();
+				var etr = Parts[i].GetTotalTransformedResult();
 				var pf = Parts[i].GetPollFactor(etr, p);
 
 				foreach (var okreg in Oszacowanie.Okregi.Values)

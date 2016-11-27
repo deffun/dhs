@@ -49,9 +49,15 @@
     <Compile Include="Mathematics\operation providers.cs" />
     <Compile Include="Mathematics\Transformation.cs" />
     <Compile Include="Mathematics\TransformationPart.cs" />
-    <Compile Include="Politics\election results.cs" />
     <Compile Include="Politics\election estimations.cs" />
+    <Compile Include="Politics\IElecteeVectorConverter.cs" />
+    <Compile Include="Politics\IOriginalElectionResults.cs" />
+    <Compile Include="Politics\KonwerterPrezydent2015Sejm2015.cs" />
+    <Compile Include="Politics\KonwerterSejmiki2014Sejm2015.cs" />
     <Compile Include="Politics\vectors.cs" />
+    <Compile Include="Politics\WynikiPrezydent2015.cs" />
+    <Compile Include="Politics\WynikiSejm2015.cs" />
+    <Compile Include="Politics\WynikiSejmiki2014.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mathematics\vectors.cs" />
   </ItemGroup>

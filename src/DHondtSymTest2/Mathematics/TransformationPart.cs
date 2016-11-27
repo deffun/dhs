@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using DHondtSymTest2.Geography;
 //using Shishaq.Serialization;
@@ -9,27 +10,11 @@ namespace DHondtSymTest2.Mathematics
 	{
 		public string Name { get; set; }
 		public double Weight { get; set; }
-		public Matrix<double> Flows { get; set; }
 		public Vector<int> TotalResult { get; set; }
 		public Vector<double> TotalRatio { get; set; }
 		public Dictionary<Teryt, Vector<int>> TerytResults { get; set; }
 		public Dictionary<Teryt, Vector<double>> TerytRatios { get; set; }
-
-		//public void Initialize<TVectorInt>(string name, double weight, IDictionary<Teryt, TVectorInt> electionResults)
-		//	where TVectorInt : Vector<int>
-		//{
-		//	Name = name;
-		//	Weight = weight;
-		//	TerytRatios = electionResults.ToDictionary(p => p.Key, p => p.Value.ConvertTo<double>());
-		//	if (!electionResults.Any())
-		//		return;
-
-		//	TotalRatio = Vector<double>.Create(electionResults.First().Value.Length);
-		//	foreach (var tr in TerytRatios)
-		//	{
-		//		TotalRatio += tr.Value;
-		//	}
-		//}
+		public Func<Vector<int>, Vector<double>> Convert { get; set; }
 
 		//public void Serialize(ISerializer serializer, string key)
 		//{
@@ -51,14 +36,18 @@ namespace DHondtSymTest2.Mathematics
 
 		public Vector<double> GetTerytTranformedResult(Teryt teryt)
 		{
-			var et = Flows * TerytResults[teryt].ConvertTo<double>();
-			return et;
+			var etr = Convert == null
+				? TerytResults[teryt].ConvertTo<double>()
+				: Convert(TerytResults[teryt]);
+			return etr;
 		}
 
-		public Vector<double> GetTotalTranformedResult()
+		public Vector<double> GetTotalTransformedResult()
 		{
-			var et = Flows * TotalResult.ConvertTo<double>();
-			return et;
+			var etr = Convert == null
+				? TotalResult.ConvertTo<double>()
+				: Convert(TotalResult);
+			return etr;
 		}
 
 		public Vector<double> GetPollFactor(Vector<double> electionTransformationResult, Vector<double> poll)
